@@ -7,6 +7,7 @@
     	    "exec_mode": "cluster",
             "instances": 2,
             "autorestart": true,
+            "exp_backoff_restart_delay": 100,
             "instance_var": "INSTANCE_ID",
             "env":{
                 "PORT": "3000",
@@ -23,8 +24,15 @@
                 "REDIS_PORT": 6379,
                 "RESULT_CACHING": false
             },
+            "env_prodci_nocache": {
+                "NODE_ENV": "production",
+                "RESULT_CACHING": false
+            },
             "env_dev": {
-                "DEBUG": "biomedical-id-resolver,bte*"
+                "DEBUG": "biomedical-id-resolver,bte*",
+                "REDIS_HOST": "localhost",
+                "REDIS_PORT": 6379,
+                "RESULT_CACHING": false
             }
         }
     ]
