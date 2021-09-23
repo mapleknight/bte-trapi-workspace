@@ -27,4 +27,4 @@ RUN apk del build-deps
 USER node
 EXPOSE 3000
 ENV NODE_ENV production
-CMD ["pm2-runtime", "bte-pm2.json", "--env prod_nocache", "--only", "bte-trapi"]
+CMD ["pm2-runtime", "bte-pm2.json", "--env prodci_nocache", "--only", "bte-trapi"]
