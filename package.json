@@ -49,7 +49,7 @@
     "pug": "Bullboard dependency",
     "bull-repl": "^0.26.3 - install if needed",
     "bull-repl-installation_option1":"install jq first, set JQ_PATH is needed; NODE_JQ_SKIP_INSTALL_BINARY=true npm install bull-repl -g",
-    "bull-repl-installation_option2":"sudo apt install autoconf libtools make; npm install bull-repl -g"
+    "bull-repl-installation_option2":"sudo apt install autoconf libtool make; npm install bull-repl -g"
   },
   "workspaces": [
     "./packages/@biothings-explorer/api-response-transform",
