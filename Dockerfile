@@ -4,6 +4,8 @@
 # docker run -it --rm -p 3000:3000 --name bte-trapi biothings/bte-trapi
 # Run with DEBUG logs enabled:
 # docker run -it --rm -p 3000:3000 --name bte-trapi -e DEBUG="biomedical-id-resolver,bte*" biothings/bte-trapi
+# Run with redis-server running on host:
+# docker run -it --rm -p 3000:3000 --name bte-trapi  -e REDIS_HOST=host.docker.internal -e REDIS_PORT=6379 -e DEBUG="biomedical-id-resolver,bte*" biothings/bte-trapi
 # Log into container:
 # docker exec -ti bte-trapi sh
 FROM node:16-alpine

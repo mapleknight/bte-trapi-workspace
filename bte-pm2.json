@@ -11,7 +11,8 @@
             "instance_var": "INSTANCE_ID",
             "env":{
                 "PORT": "3000",
-                "LOG": "./log"
+                "LOG": "./log",
+                "REQUEST_TIMEOUT": 1200
             },
             "env_prod": {
        	        "NODE_ENV": "production",
