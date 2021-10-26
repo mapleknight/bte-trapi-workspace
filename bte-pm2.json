@@ -5,7 +5,7 @@
             "cwd": "packages/@biothings-explorer/bte-trapi",
             "script": "./src/server.js",
     	    "exec_mode": "cluster",
-            "instances": 2,
+            "instances": 3,
             "autorestart": true,
             "exp_backoff_restart_delay": 100,
             "instance_var": "INSTANCE_ID",
@@ -25,9 +25,9 @@
                 "REDIS_PORT": 6379,
                 "RESULT_CACHING": false
             },
-            "env_prodci_nocache": {
+            "env_prodci": {
                 "NODE_ENV": "production",
-                "RESULT_CACHING": false
+                "REDIS_TLS_ENABLED": true
             },
             "env_dev": {
                 "DEBUG": "biomedical-id-resolver,bte*",
