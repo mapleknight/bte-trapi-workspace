@@ -21,4 +21,4 @@ done
 helm -n ${namespace} uninstall ${projectName} 
 
 # deploy helm chart
-helm -n ${namespace} upgrade --install ${projectName} ./
+helm -n ${namespace} upgrade --install ${projectName} -f values-test.yaml ./
