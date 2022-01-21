@@ -13,7 +13,7 @@ RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 RUN npm i pm2 -g
 # install git first and then remove it after `run clone` is done
-RUN apk add --no-cache --virtual build-deps git
+RUN apk add --no-cache --virtual build-deps git lz4 python3 make g++
 COPY --chown=node:node . .
 USER node
 
