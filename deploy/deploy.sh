@@ -18,7 +18,7 @@ done
 
 
 # for CI, need to remove previous deployment since the taint and tolleration will only allow one deployment exists
-helm -n ${namespace} uninstall ${projectName} 
+#helm -n ${namespace} uninstall ${projectName} 
 
 # deploy helm chart
 helm -n ${namespace} upgrade --install ${projectName} -f values-bte.yaml ./
