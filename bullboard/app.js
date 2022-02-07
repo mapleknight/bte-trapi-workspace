@@ -28,11 +28,11 @@ if( process.env.REDIS_PASSWORD) {
   details.password = process.env.REDIS_PASSWORD
 }
 
-const bullQueue1 = new Queue('get query graph', process.env.REDIS_HOST ?
+const bullQueue1 = new Queue('bte_query_queue', process.env.REDIS_HOST ?
     { redis: details } : 'redis://127.0.0.1:6379')
-const bullQueue2 = new Queue('get query graph by team', process.env.REDIS_HOST ?
+const bullQueue2 = new Queue('bte_query_queue_by_team', process.env.REDIS_HOST ?
     { redis: details } : 'redis://127.0.0.1:6379')
-const bullQueue3 = new Queue('get query graph by api', process.env.REDIS_HOST ?
+const bullQueue3 = new Queue('bte_query_queue_by_api', process.env.REDIS_HOST ?
     { redis: details } : 'redis://127.0.0.1:6379')
 
 const serverAdapter = new ExpressAdapter();
