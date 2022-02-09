@@ -9,6 +9,7 @@
 # Log into container:
 # docker exec -ti bte-trapi sh
 FROM node:16-alpine
+ARG debug
 RUN mkdir -p /home/node/app && chown -R node:node /home/node/app
 WORKDIR /home/node/app
 RUN npm i pm2 -g
@@ -34,4 +35,5 @@ RUN apk del build-deps
 USER node
 EXPOSE 3000
 ENV NODE_ENV production
+ENV DEBUG ${debug:+biomedical-id-resolver,bte*}
 CMD ["pm2-runtime", "bte-pm2.json", "--env prodci", "--only", "bte-trapi"]
