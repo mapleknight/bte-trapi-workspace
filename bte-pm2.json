@@ -9,6 +9,7 @@
             "autorestart": true,
             "exp_backoff_restart_delay": 100,
             "instance_var": "INSTANCE_ID",
+            "log_date_format" : "YYYY-MM-DD HH:mm Z",
             "env":{
                 "PORT": "3000",
                 "LOG": "./log",
