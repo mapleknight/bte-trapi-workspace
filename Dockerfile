@@ -19,6 +19,7 @@ RUN npm i pm2 -g
 #    git: used for clone multiple source repos in our monorepo setup
 #    lz4 python3 make g++: required to build lz4 nodejs package
 RUN apk add --no-cache --virtual build-deps git lz4 python3 make g++
+RUN apk add --no-cache curl
 COPY --chown=node:node . .
 USER node
 
