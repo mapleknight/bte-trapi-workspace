@@ -20,7 +20,7 @@
     "test": "lerna run test",
     "prepare": "npm run compile",
     "smartapi_sync": "cd packages/@biothings-explorer/bte-trapi && npm run smartapi_sync",
-    "start": "./scripts/start_w_redis.sh",
+    "start": "./scripts/start_server.sh",
     "stop": "./scripts/stop_server.sh"
   },
   "devDependencies": {
