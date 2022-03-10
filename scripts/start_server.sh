@@ -2,7 +2,7 @@ current_folder=`pwd`
 redis_available=false
 
 npm run compile
-if [ $1 = "redis" ]
+if [ "$1" = "redis" ]
 then
     {
         redis-cli -h localhost -p 6379 ping > /dev/null 2>&1
