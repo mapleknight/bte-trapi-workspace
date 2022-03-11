@@ -69,7 +69,3 @@ spec:
           configMap:
             name: {{ include "bte.fullname" . }}-configs
             defaultMode: 0755
-        - name: {{ include "bte.fullname" . }}-env-volume
-          configMap:
-            name: {{ include "bte.fullname" . }}-env
-            defaultMode: 0755
