@@ -26,6 +26,15 @@ spec:
             - name: http
               containerPort: 3000
               protocol: TCP
+          env:
+            - name: REDIS_HOST
+              value: REDIS_HOST_VALUE
+            - name: REDIS_PORT
+              value: REDIS_PORT_VALUE
+            - name: REDIS_PASSWORD
+              value: REDIS_PASSWORD_VALUE 
+            - name: REDIS_TLS_ENABLED
+              value: REDIS_TLS_ENABLED_VALUE 
           volumeMounts:
             - name: {{ include "bte.fullname" . }}-configs-volume
               mountPath: /configs
