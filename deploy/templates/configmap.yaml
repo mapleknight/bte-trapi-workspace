@@ -17,5 +17,3 @@ metadata:
     {{- include "bte.labels" . | nindent 4 }}
 data:
   {{- (.Files.Glob "configs/*.json").AsConfig | nindent 2 }}
-
-

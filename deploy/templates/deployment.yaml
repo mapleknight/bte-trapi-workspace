@@ -38,8 +38,6 @@ spec:
           volumeMounts:
             - name: {{ include "bte.fullname" . }}-configs-volume
               mountPath: /configs
-            - name: {{ include "bte.fullname" . }}-env-volume
-              mountPath: /env
             - name: {{ include "bte.fullname" . }}-scripts-volume
               mountPath: /scripts
           livenessProbe:
