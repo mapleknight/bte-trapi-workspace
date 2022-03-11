@@ -32,11 +32,6 @@ spec:
               value: "{{ .Values.env.REDIS_PASSWORD_VALUE }}"
             - name: REDIS_TLS_ENABLED
               value: "{{ .Values.env.REDIS_TLS_VALUE }}"
-          volumeMounts:
-            - name: {{ include "bte.fullname" . }}-configs-volume
-              mountPath: /configs
-            - name: {{ include "bte.fullname" . }}-scripts-volume
-              mountPath: /scripts
           livenessProbe:
             httpGet:
               path: /
