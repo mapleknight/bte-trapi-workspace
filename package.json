@@ -19,7 +19,9 @@
     "lint": "npm run format:check",
     "test": "lerna run test",
     "prepare": "npm run compile",
-    "smartapi_sync": "cd packages/@biothings-explorer/bte-trapi && npm run smartapi_sync"
+    "smartapi_sync": "cd packages/@biothings-explorer/bte-trapi && npm run smartapi_sync",
+    "start": "./scripts/start_server.sh",
+    "stop": "./scripts/stop_server.sh"
   },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^4.29.3",

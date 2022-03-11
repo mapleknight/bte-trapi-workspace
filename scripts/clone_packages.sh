@@ -17,13 +17,10 @@ fi
 # git@github.com:biothings/BioThings_Explorer_TRAPI.git
 
 set -x
-git clone $base_url"biothings/BioThings_Explorer_TRAPI.git" "./packages/@biothings-explorer/bte-trapi"
-git clone $base_url"biothings/bte_trapi_query_graph_handler.git" "./packages/@biothings-explorer/query_graph_handler"
-git clone $base_url"biothings/biolink-model.js.git" "./packages/biolink-model"
-git clone $base_url"biothings/biomedical_id_resolver.js.git" "./packages/biomedical_id_resolver"
-git clone $base_url"biothings/smartapi-kg.js.git" "./packages/@biothings-explorer/smartapi-kg"
-git clone $base_url"biothings/call-apis.js.git" "./packages/@biothings-explorer/call-apis"
-git clone $base_url"biothings/api-respone-transform.js.git" "./packages/@biothings-explorer/api-response-transform"
+while read -r url module_dir
+do
+    git clone $base_url"$url" "$module_dir"
+done < scripts/packages.txt
 
 cd "./packages/@biothings-explorer/call-apis"
 ln -s ../../../scripts/tsconfig.json_call-apis ./tsconfig.json
