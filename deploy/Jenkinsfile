@@ -56,7 +56,7 @@ pipeline {
       stage('Deploy to AWS EKS Blue') {
           steps {
               configFileProvider([
-                  configFile(fileId: '.env', targetLocation: 'deploy/configs/.env')
+                  configFile(fileId: 'values-bte.yaml', targetLocation: 'deploy/values-bte.yaml')
               ]){
                   withAWS(credentials:'aws-ifx-deploy') 
                   {
